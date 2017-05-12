@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Miner</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+    <!--build:css css/styles.min.css-->
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css">
+    <!--endbuild-->
+    <style>
+        body {
+            font: 15px sans-serif;
+            line-height: 1.8;
+            color: #474e5d;
+        }
+
+        .margin {
+            margin-bottom: 45px;
+        }
+
+        .bg-1 {
+            background-color: #91A5C0;
+            color: #ffffff;
+        }
+
+        .bg-2 {
+            background-color: #474e5d;
+            color: #ffffff;
+        }
+
+        .bg-3 {
+            background-color: #ffffff;
+            color: #555555;
+        }
+
+        .bg-4 {
+            background-color: #2f2f2f;
+            color: #fff;
+        }
+
+        .container-fluid {
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+
+        .container-fluid2 {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .navbar {
+            padding-top: 3px;
+            padding-bottom: 3px;
+            border: 0;
+            border-radius: 0;
+            margin-bottom: 0;
+            font-size: 14px;
+            letter-spacing: 5px;
+        }
+
+        .navbar-default .navbar-nav li a {
+            color: #000000;
+        }
+
+        .navbar-nav li a:hover {
+            color: #ffffff !important;
+        }
+
+        input {
+            color: #000000;
+        }
+    </style>
+</head>
+
+<body ng-app="minerApp">
+    <div class="jumbotron text-center">
+        <h2>Miner application</h2>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-left">
+                <li ng-class="{active: activetab == '/'}"><a href="#/home">Home</a></li>
+                <li ng-class="{active: activetab == '/settings'}"><a href="#/settings">Settings</a></li>
+                <li ng-class="{active: activetab == '/j48'}"><a href="#/j48">J48 - Tree</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- First Container -->
+    <div ng-view>
+        <!--class="container-fluid bg-2 text-center" -->
+        
+    </div>
+
+    <!-- Footer -->
+    <footer class="container-fluid2 bg-4 text-center">
+        <p>
+            <a href="https://github.com/ldpereira/"><h4>   Lucas Dalcol Pereira   </h4></a>
+            <div></div>
+            <f> System analyst - Project of CCW</f>
+        </p>
+    </footer>
+
+    <!-- build:js js/main.min.js -->
+    <script src="vendor/jquery/dist/jquery.min.js"></script>
+    <script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="vendor/angular/angular.js"></script>
+    <script src="vendor/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi?sensor=false"></script>
+    <script src="app.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/j48.js"></script>
+    <!-- endbuild -->
+
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+logs/*
+.gulp/*
+dist/
+app/vendor
+!.gitkeep
+node_modules/
+tmp
+.DS_Store
+.idea
