@@ -7,15 +7,15 @@ app.config(function ($routeProvider, $locationProvider) {
 
     $routeProvider
 		.when('/', {
-			templateUrl: 'view/home.html',
+			templateUrl: '/view/home.html',
 			controller: 'HomeCtrl'
 		})
 		.when('/settings', {
-			templateUrl: 'view/settings.html',
+			templateUrl: '/view/settings.html',
 			controller: 'SettingsCtrl'
 		})
 		.when('/j48', {
-			templateUrl: 'view/j48.html',
+			templateUrl: '/view/j48.html',
 			controller: 'J48Ctrl'
 		})
 		.otherwise({

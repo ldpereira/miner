@@ -2,8 +2,10 @@
 
 var app = angular.module('minerApp');
 
-app.controller('HomeCtrl', ['$location', function($location) {
+app.controller('HomeCtrl', ['$scope','$location', 'Service', function($scope, $location, Service) {
     //$rootScope.activeTab = $location.path();
-    $scope.teste = "asdfasdf";
-    
+    $scope.click = click;
+
+    function click() {        
+    }
 }]);
