@@ -10,6 +10,6 @@ gulp dev
 # Notes
 Need execute the backend project: http://github.com/ldpereira/miner-backend
 
-# Concact
+# Contact
 Lucas Pereira
 ldpereira@icloud.com
