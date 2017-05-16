@@ -2,21 +2,25 @@
 
 var app = angular.module('minerApp');
 
-app.controller('J48Ctrl', ['$scope', '$location', 'Service', function($scope, $location, Service) {
-    
+app.controller('J48Ctrl', ['$scope', '$location', 'Service', function ($scope, $location, Service) {
+
     $scope.minerJ48 = minerJ48;
     $scope.mensagem = "Clique para realizar a mineração";
+    $scope.data;
+
+    
 
     function minerJ48() {
         $scope.mensagem = "Aguardando a execução no servidor";
         Service.minerJ48('teste').then(function success(response) {
-            $scope.mensagem = response.data;
+            $scope.mensagem = "Consulta realizada com sucesso";
+            $scope.data = response.data;
             console.log("Success");
-            console.log(response);
+            console.log(response.data);
         }, function error(response) {
-            $scope.mensagem = response.data;
+            $scope.mensagem = "Consulta retornou com erros, visualize no console";
             console.log("Error");
-            console.log(response);
+            console.log(response.data);
         });
     }
 }]);
