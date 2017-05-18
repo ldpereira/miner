@@ -8,7 +8,13 @@ app.controller('J48Ctrl', ['$scope', '$location', 'Service', function ($scope, $
     $scope.mensagem = "Clique para realizar a mineração";
     $scope.data;
 
-    
+    $scope.collapse = function (node) {
+        if (angular.isUndefined(node.collapsed)) {
+            node.collapsed = false;
+        } else {
+            node.collapsed = !node.collapsed;
+        }
+    }
 
     function minerJ48() {
         $scope.mensagem = "Aguardando a execução no servidor";
