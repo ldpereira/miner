@@ -1,5 +1,7 @@
 <form ng-controller="J48Ctrl">
     <div class="jumbotron text-center">
+        File: <input type="text" ng-model="file"></input>
+        <p></p>
         <button ng-click="minerJ48()">Minerar!</button>
         <div>
             {{mensagem}}
@@ -53,6 +55,126 @@
                                                             <div ui-tree-handle class="tree-node tree-node-content angular-ui-tree-handle text-node" style="padding-left: 110px">
                                                                 {{node.text}}
                                                             </div>
+                                                            <ol ui-tree-nodes class="angular-ui-tree-nodes">
+                                                                <li ng-repeat="node in node.nodes" ui-tree-node class="angular-ui-tree-node" collapsed="node.collapsed">
+                                                                    <div ui-tree-handle class="tree-node tree-node-content angular-ui-tree-handle label-node" style="padding-left: 110px">
+                                                                        {{node.label}}
+                                                                    </div>
+                                                                    <div ui-tree-handle class="tree-node tree-node-content angular-ui-tree-handle text-node" style="padding-left: 130px">
+                                                                        {{node.text}}
+                                                                    </div>
+                                                                    <ol ui-tree-nodes class="angular-ui-tree-nodes">
+                                                                        <li ng-repeat="node in node.nodes" ui-tree-node class="angular-ui-tree-node" collapsed="node.collapsed">
+                                                                            <div ui-tree-handle class="tree-node tree-node-content angular-ui-tree-handle label-node" style="padding-left: 130px">
+                                                                                {{node.label}}
+                                                                            </div>
+                                                                            <div ui-tree-handle class="tree-node tree-node-content angular-ui-tree-handle text-node" style="padding-left: 150px">
+                                                                                {{node.text}}
+                                                                            </div>
+                                                                            <ol ui-tree-nodes class="angular-ui-tree-nodes">
+                                                                                <li ng-repeat="node in node.nodes" ui-tree-node class="angular-ui-tree-node" collapsed="node.collapsed">
+                                                                                    <div ui-tree-handle class="tree-node tree-node-content angular-ui-tree-handle label-node" style="padding-left: 150px">
+                                                                                        {{node.label}}
+                                                                                    </div>
+                                                                                    <div ui-tree-handle class="tree-node tree-node-content angular-ui-tree-handle text-node" style="padding-left: 170px">
+                                                                                        {{node.text}}
+                                                                                    </div>
+                                                                                    <ol ui-tree-nodes class="angular-ui-tree-nodes">
+                                                                                        <li ng-repeat="node in node.nodes" ui-tree-node class="angular-ui-tree-node" collapsed="node.collapsed">
+                                                                                            <div ui-tree-handle class="tree-node tree-node-content angular-ui-tree-handle label-node" style="padding-left: 170px">
+                                                                                                {{node.label}}
+                                                                                            </div>
+                                                                                            <div ui-tree-handle class="tree-node tree-node-content angular-ui-tree-handle text-node" style="padding-left: 190px">
+                                                                                                {{node.text}}
+                                                                                            </div>
+                                                                                            <ol ui-tree-nodes class="angular-ui-tree-nodes">
+                                                                                                <li ng-repeat="node in node.nodes" ui-tree-node class="angular-ui-tree-node" collapsed="node.collapsed">
+                                                                                                    <div ui-tree-handle class="tree-node tree-node-content angular-ui-tree-handle label-node" style="padding-left: 190px">
+                                                                                                        {{node.label}}
+                                                                                                    </div>
+                                                                                                    <div ui-tree-handle class="tree-node tree-node-content angular-ui-tree-handle text-node" style="padding-left: 210px">
+                                                                                                        {{node.text}}
+                                                                                                    </div>
+                                                                                                    <ol ui-tree-nodes class="angular-ui-tree-nodes">
+                                                                                                        <li ng-repeat="node in node.nodes" ui-tree-node class="angular-ui-tree-node" collapsed="node.collapsed">
+                                                                                                            <div ui-tree-handle class="tree-node tree-node-content angular-ui-tree-handle label-node" style="padding-left: 210px">
+                                                                                                                {{node.label}}
+                                                                                                            </div>
+                                                                                                            <div ui-tree-handle class="tree-node tree-node-content angular-ui-tree-handle text-node" style="padding-left: 230px">
+                                                                                                                {{node.text}}
+                                                                                                            </div>
+                                                                                                            <ol ui-tree-nodes class="angular-ui-tree-nodes">
+                                                                                                                <li ng-repeat="node in node.nodes" ui-tree-node class="angular-ui-tree-node" collapsed="node.collapsed">
+                                                                                                                    <div ui-tree-handle class="tree-node tree-node-content angular-ui-tree-handle label-node" style="padding-left: 230px">
+                                                                                                                        {{node.label}}
+                                                                                                                    </div>
+                                                                                                                    <div ui-tree-handle class="tree-node tree-node-content angular-ui-tree-handle text-node" style="padding-left: 250px">
+                                                                                                                        {{node.text}}
+                                                                                                                    </div>
+                                                                                                                    <ol ui-tree-nodes class="angular-ui-tree-nodes">
+                                                                                                                        <li ng-repeat="node in node.nodes" ui-tree-node class="angular-ui-tree-node" collapsed="node.collapsed">
+                                                                                                                            <div ui-tree-handle class="tree-node tree-node-content angular-ui-tree-handle label-node" style="padding-left: 250px">
+                                                                                                                                {{node.label}}
+                                                                                                                            </div>
+                                                                                                                            <div ui-tree-handle class="tree-node tree-node-content angular-ui-tree-handle text-node" style="padding-left: 270px">
+                                                                                                                                {{node.text}}
+                                                                                                                            </div>
+                                                                                                                            <ol ui-tree-nodes class="angular-ui-tree-nodes">
+                                                                                                                                <li ng-repeat="node in node.nodes" ui-tree-node class="angular-ui-tree-node" collapsed="node.collapsed">
+                                                                                                                                    <div ui-tree-handle class="tree-node tree-node-content angular-ui-tree-handle label-node" style="padding-left: 270px">
+                                                                                                                                        {{node.label}}
+                                                                                                                                    </div>
+                                                                                                                                    <div ui-tree-handle class="tree-node tree-node-content angular-ui-tree-handle text-node" style="padding-left: 290px">
+                                                                                                                                        {{node.text}}
+                                                                                                                                    </div>
+                                                                                                                                    <ol ui-tree-nodes class="angular-ui-tree-nodes">
+                                                                                                                                        <li ng-repeat="node in node.nodes" ui-tree-node class="angular-ui-tree-node" collapsed="node.collapsed">
+                                                                                                                                            <div ui-tree-handle class="tree-node tree-node-content angular-ui-tree-handle label-node" style="padding-left: 290px">
+                                                                                                                                                {{node.label}}
+                                                                                                                                            </div>
+                                                                                                                                            <div ui-tree-handle class="tree-node tree-node-content angular-ui-tree-handle text-node" style="padding-left: 310px">
+                                                                                                                                                {{node.text}}
+                                                                                                                                            </div>
+                                                                                                                                            <ol ui-tree-nodes class="angular-ui-tree-nodes">
+                                                                                                                                                <li ng-repeat="node in node.nodes" ui-tree-node class="angular-ui-tree-node" collapsed="node.collapsed">
+                                                                                                                                                    <div ui-tree-handle class="tree-node tree-node-content angular-ui-tree-handle label-node" style="padding-left: 310px">
+                                                                                                                                                        {{node.label}}
+                                                                                                                                                    </div>
+                                                                                                                                                    <div ui-tree-handle class="tree-node tree-node-content angular-ui-tree-handle text-node" style="padding-left: 330px">
+                                                                                                                                                        {{node.text}}
+                                                                                                                                                    </div>
+                                                                                                                                                    <ol ui-tree-nodes class="angular-ui-tree-nodes">
+                                                                                                                                                        <li ng-repeat="node in node.nodes" ui-tree-node class="angular-ui-tree-node" collapsed="node.collapsed">
+                                                                                                                                                            <div ui-tree-handle class="tree-node tree-node-content angular-ui-tree-handle label-node" style="padding-left: 330px">
+                                                                                                                                                                {{node.label}}
+                                                                                                                                                            </div>
+                                                                                                                                                            <div ui-tree-handle class="tree-node tree-node-content angular-ui-tree-handle text-node" style="padding-left: 350px">
+                                                                                                                                                                {{node.text}}
+                                                                                                                                                            </div>
+                                                                                                                                                        </li>
+                                                                                                                                                    </ol>
+                                                                                                                                                </li>
+                                                                                                                                            </ol>
+                                                                                                                                        </li>
+                                                                                                                                    </ol>
+                                                                                                                                </li>
+                                                                                                                            </ol>
+                                                                                                                        </li>
+                                                                                                                    </ol>
+                                                                                                                </li>
+                                                                                                            </ol>
+                                                                                                        </li>
+                                                                                                    </ol>
+                                                                                                </li>
+                                                                                            </ol>
+                                                                                        </li>
+                                                                                    </ol>
+                                                                                </li>
+                                                                            </ol>
+                                                                        </li>
+                                                                    </ol>
+                                                                </li>
+                                                            </ol>
                                                         </li>
                                                     </ol>
                                                 </li>
@@ -68,5 +190,6 @@
         </div>
     </div>
     <div>
+        Fim de leitura do arquivo
     </div>
 </form>

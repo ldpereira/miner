@@ -9,8 +9,8 @@ app.factory('Service', ['$http', function ($http) {
         sendMessage: sendMessage
     };
 
-    function minerJ48(teste) {
-        return $http.get(prefix + 'minerJ48/' + teste);
+    function minerJ48(file) {
+        return $http.get(prefix + 'minerJ48/' + file);
     }
 
     function getContacts(group) {
