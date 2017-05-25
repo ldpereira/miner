@@ -18,7 +18,7 @@ app.controller('J48Ctrl', ['$scope', '$location', 'Service', function ($scope, $
 
     function minerJ48() {
         $scope.mensagem = "Aguardando a execução no servidor";
-        Service.minerJ48(angular.isUndefined($scope.file) ? "" : $scope.file).then(function success(response) {
+        Service.minerJ48("").then(function success(response) {
             $scope.mensagem = "Consulta realizada com sucesso";
             $scope.data = response.data;
             console.log("Success");
